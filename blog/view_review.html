@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+ {% block content %}
+    {% for r in review %}
+        <article class="media content-section">
+          
+          <div class="media-body">
+            <div class="article-metadata">
+              <h2><a class="mr-2">{{ r.Company }}</a></h2>
+             
+            </div>
+            <p class="article-content">Interview Rating - {{ r.Interview_Rating }}</p>
+            <p class="article-content">Salary Rating- {{ r.Salary_Rating }}</p>
+            <p class="article-content">Work Life Balance - {{ r.Work_Life_Balance }}</p>
+            <p class="article-content">Comments - {{ r.Comments }}</p>
+
+          </div>
+        </article>
+    {% endfor %}
+    
+{% endblock content %}
